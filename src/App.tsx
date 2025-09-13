@@ -3,7 +3,7 @@ import "./App.css";
 import { listen } from "@tauri-apps/api/event";
 import ThrottlePos from "./components/state-readers/throttlePos";
 import Rpm from "./components/state-readers/rpm";
-import EngineLoad from "./components/state-readers/engineLoad";
+import Speed from "./components/state-readers/speed";
 import { Card, CardContent } from "./components/ui/card";
 import OutsideTemp from "./components/state-readers/outsideTemp";
 import IntakeTemp from "./components/state-readers/intakeTemp";
@@ -30,7 +30,7 @@ function App() {
         <div className="flex h-screen gap-3 xl:gap-6 flex-row-reverse p-5 xl:p-15">
             <div className="flex flex-col flex-1 justify-between gap-3 xl:gap-6">
                 <Rpm rpm={data["rpm"]} />
-                <EngineLoad engineLoad={data["engineLoad"]} />
+                <Speed speed={data["speed"]} />
                 <ThrottlePos throttlePos={data["throttlePos"]} />
             </div>
             <Card className="flex-1">
